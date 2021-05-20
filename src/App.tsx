@@ -31,6 +31,7 @@ function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     searchForRepos();
     setText("")
   }
+
   function fetchRepo() {
     axios({
       method: "get",
@@ -61,7 +62,8 @@ function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   return (
     <div className="App"> 
     <Navbar onChange={handleChange} value={text} onSubmit={handleSubmit}/>
-    {isSearched ? <Results totalCountRepo={totalCountRepo} totalCountUser={totalCountUser} repos={repos}/> : (<div className="search_false">
+    {isSearched ? <Results totalCountRepo={totalCountRepo} totalCountUser={totalCountUser} repos={repos} users={users}/> : 
+    (<div className="search_false">
       <img src={bodyImage} alt="Search Icon" />
       <p>Search results will appear here</p>
     </div>)}
