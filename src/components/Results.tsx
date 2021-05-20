@@ -1,8 +1,8 @@
 import React from 'react'
 import Aside from './Aside'
-import "../styles/Results.scss"
 import Repos from './Repos'
 import Users from './Users'
+import "../styles/Results.scss"
 interface resultsProps{
     totalCountRepo: string;
     totalCountUser: string;
@@ -12,7 +12,7 @@ interface resultsProps{
 const Results: React.FC<resultsProps> = ({totalCountRepo, repos, totalCountUser, users}) => {
     return (
         <div>
-            <Aside totalCount={totalCountRepo}/>
+            <Aside totalCountRepo={totalCountRepo} totalCountUser={totalCountUser}/>
             <Repos totalCountRepo={totalCountRepo} repos={repos}/>
             <Users totalCountUser={totalCountUser} users={users}/>
         </div>

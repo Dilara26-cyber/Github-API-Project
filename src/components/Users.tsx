@@ -16,7 +16,7 @@ const Users: React.FC<userProps> = ({totalCountUser, users}) => {
                                  <img src={book} alt="Bookmark the repo" />
                                   <h2>{user.login}</h2>
                            </div>
-                            <p>{user.avatar_url}</p>
+                            <img src={user.avatar_url} alt={user.login} />
                        </section>
                    ) 
                 } ))}
