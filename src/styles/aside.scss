@@ -1,0 +1,36 @@
+.aside {
+  flex-direction: column;
+  align-items: baseline;
+  padding-top: 0.5em;
+}
+
+.aside,
+.aside__link {
+  display: flex;
+  a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+  p {
+    padding-left: 1em;
+  }
+}
+.aside__link {
+  padding: 1em;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  svg {
+    font-size: 1.5rem;
+    color: #375f9d;
+  }
+  span {
+    position: absolute;
+    right: 10px;
+  }
+}
+.aside__link.active {
+  background-color: #d9e8ff;
+  color: rgba(55, 95, 157, 0.87);
+}

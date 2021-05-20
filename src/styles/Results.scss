@@ -1,6 +1,7 @@
 .results {
   padding: 1em;
   h1 {
+    font-weight: 400;
     margin-bottom: 1.5rem;
   }
 }
@@ -20,11 +21,16 @@
 
 .results__info--heading {
   display: flex;
+  align-items: center;
   gap: 0.5em;
-  h2 {
+  a {
     font-size: 1rem;
     font-weight: 400;
     color: #375f9d;
+    text-decoration: none;
+  }
+  h2 {
+    font-size: 1.25rem;
   }
 }
 
@@ -37,4 +43,8 @@
   display: block;
   background-color: #bebebe;
   height: 1px;
+}
+
+.avatar_img {
+  border-radius: 50%;
 }

@@ -5,9 +5,10 @@ import './App.css';
 import axios from "axios";
 import Results from './components/Results';
 import Home from './components/Home';
+import UsersDetails from "./components/UsersDetails"
 
 function App() {
-  const [users, setUsers] = useState([])
+  const [users, setUsers]=useState([])
   const [repos, setRepos] = useState([])
   const [totalCountRepo, setTotalCountRepo] = useState("")
   const [totalCountUser, setTotalCountUser] = useState("")
@@ -32,27 +33,22 @@ function App() {
 function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     searchForRepos();
-    history.push("/results")
+    history.push("/results/repos")
     setText("")
   }
 
-  function fetchRepo() {
-    axios({
-      method: "get",
-      url: `https://api.github.com/search/repositories?q=${text}`
-    }).then(res => {
-    setRepos(res.data.items)
-    setTotalCountRepo(res.data.total_count)  })
+  async function fetchRepo() {
+    const response = await axios.get(`https://api.github.com/search/repositories?q=${text}`)
+    setRepos(response.data.items)
+    setTotalCountRepo(response.data.total_count)
   }
-  function fetchUser() {
-    axios({
-      method: "get",
-      url: `https://api.github.com/search/users?q=${text}`
-    }).then(res => {
-    setUsers(res.data.items)
-    setTotalCountUser(res.data.total_count)
-  })
+ async function fetchUser() {
+   const response = await axios.get(`https://api.github.com/search/users?q=${text}`)
+   setUsers(response.data.items)
+   setTotalCountUser(response.data.total_count)
   }
+
+  
   
     
     /*setTotalCount(response.data.total_count)
@@ -69,6 +65,7 @@ function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
       <Switch>
     {isSearched ? <Route path="/results"><Results totalCountRepo={totalCountRepo} totalCountUser={totalCountUser} repos={repos} users={users}/></Route> : 
      <Route exact path="/"><Home/></Route>}
+     <Route path="/:login"><UsersDetails/></Route>
        </Switch>
     </div> 
   );

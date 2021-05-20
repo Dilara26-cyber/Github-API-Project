@@ -1,6 +1,9 @@
 import React from 'react'
+import { NavLink } from "react-router-dom"
 import { IoMdDocument } from "react-icons/io"
-import book from "../images/book.svg"
+import "../styles/aside.scss"
+import user from "../images/aside_user.png"
+import bookmark from "../images/aside_bookmark.png"
 interface asideProps{
     totalCountRepo: string;
     totalCountUser: string;
@@ -8,10 +11,9 @@ interface asideProps{
 const Aside: React.FC<asideProps> = ({totalCountRepo, totalCountUser}) => {
     return (
         <aside className="aside">
-            <p><IoMdDocument/>  {totalCountRepo} Repositories</p>
-            <p>{totalCountUser} Users</p>
-            <div><img src={book} alt="Go to the bookmark section"/><p>Bookmarks</p></div>
-
+            <NavLink to="/results/repos" activeClassName="active" className="aside__link"><IoMdDocument/><p>Repositories <span>{totalCountRepo}</span></p></NavLink>
+            <NavLink to="/results/users" activeClassName="active" className="aside__link"><img src={user} alt="Go to the user section"/><p>Users <span>{totalCountUser}</span></p></NavLink>
+            <NavLink to="/results/bookmarks" activeClassName="active" className="aside__link"><img src={bookmark} className="size" alt="Go to the bookmark section"/><p>Bookmarks <span>12</span></p></NavLink>
         </aside>
     )
 }
