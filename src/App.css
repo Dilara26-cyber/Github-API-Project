@@ -6,3 +6,20 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+.search_false {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.search_false img {
+  width: 86px;
+  height: 86px;
+}
+.search_false p {
+  font-size: 1.5rem;
+  color: #85b0f2;
+}

@@ -1,0 +1,40 @@
+.results {
+  padding: 1em;
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+}
+.results__info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 2em;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+  p {
+    padding-left: 2em;
+  }
+}
+
+.results__info--heading {
+  display: flex;
+  gap: 0.5em;
+  h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #375f9d;
+  }
+}
+
+.results__info::after {
+  position: relative;
+  bottom: -1em;
+  content: '';
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  background-color: #bebebe;
+  height: 1px;
+}
