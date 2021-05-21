@@ -34,3 +34,10 @@
   background-color: #d9e8ff;
   color: rgba(55, 95, 157, 0.87);
 }
+
+@media (min-width: 720px) {
+  .aside {
+    width: 20%;
+    border-right: 1px solid #c4c4c4;
+  }
+}

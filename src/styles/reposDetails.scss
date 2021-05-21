@@ -1,0 +1,26 @@
+.side_one {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+  p {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.side_one:after {
+  position: relative;
+  bottom: -1em;
+  content: '';
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  background-color: #bebebe;
+  height: 1px;
+}

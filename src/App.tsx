@@ -6,6 +6,7 @@ import axios from "axios";
 import Results from './components/Results';
 import Home from './components/Home';
 import UsersDetails from "./components/UsersDetails"
+import ReposDetails from "./components/ReposDetails"
 
 function App() {
   const [users, setUsers]=useState([])
@@ -13,7 +14,6 @@ function App() {
   const [totalCountRepo, setTotalCountRepo] = useState("")
   const [totalCountUser, setTotalCountUser] = useState("")
   const [text, setText] = useState("")
-  const [isSearched, setIsSearched] = useState(false)
   const history:any = useHistory()
  /*useEffect(() => {
     async function getApi() {
@@ -26,7 +26,6 @@ function App() {
       console.log(text)
   }
   const searchForRepos = () => {
-    setIsSearched(true)
     fetchRepo()
     fetchUser()
 };
@@ -62,10 +61,11 @@ function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   return (
     <div className="App"> 
     <Navbar onChange={handleChange} value={text} onSubmit={handleSubmit}/>
-      <Switch>
-    {isSearched ? <Route path="/results"><Results totalCountRepo={totalCountRepo} totalCountUser={totalCountUser} repos={repos} users={users}/></Route> : 
-     <Route exact path="/"><Home/></Route>}
-     <Route path="/:login"><UsersDetails/></Route>
+      <Switch> 
+        <Route exact path="/"><Home/></Route>
+        <Route path="/results"><Results totalCountRepo={totalCountRepo} totalCountUser={totalCountUser} repos={repos} users={users}/></Route>
+        <Route path="/user/:login"><UsersDetails/></Route>
+        <Route exact path="/:repo/:login"><ReposDetails/></Route>
        </Switch>
     </div> 
   );

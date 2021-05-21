@@ -1,4 +1,5 @@
 import React, { ChangeEventHandler, FormEventHandler } from 'react'
+import { Link } from "react-router-dom"
 import logo from "../images/logo.png"
 import "../styles/navbar.scss"
 import { AiOutlineSearch } from "react-icons/ai"
@@ -13,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({onChange, value, onSubmit}) => {
     return (
         <nav className="navbar">
            <ul className="navbar__list">
-               <img src={logo} alt="Company logo" className="logo"/>
+               <Link to="/" className="logo"><img src={logo} alt="Company logo" className="logo"/></Link>
                <div className="search">
                    <form action="#" className="search" onSubmit={onSubmit}>
                        <AiOutlineSearch className="search__icon"/>

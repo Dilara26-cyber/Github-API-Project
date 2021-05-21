@@ -23,3 +23,8 @@
   font-size: 1.5rem;
   color: #85b0f2;
 }
+
+h1,
+h2 {
+  font-weight: 400;
+}
