@@ -1,2 +1,2 @@
-My first, hope not least, TypeScript && React Project. 
-This is a react app that users can search for GitHub users and repos. The user is able to reach user and repo details by clicking the search results.
+My first TypeScript && React Project. 
+This is a react app that users can search for GitHub users and repos. The user is able to reach the user and repo details by clicking the search results. The user is also can bookmark the repos. If the selected repo is in the bookmarks, the user can remove it by clicking a button in the repository's detailed page. On the other hand, if the selected repo is not in the bookmarks, the user can add it through a button in the repository's detailed page. The bookmarks are stored in the local storage. 
