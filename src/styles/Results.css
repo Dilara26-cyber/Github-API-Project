@@ -1,0 +1,120 @@
+.results {
+  padding: 1em;
+}
+
+.results h1 {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.results__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 2em;
+}
+
+.results__info img {
+  width: 24px;
+  height: 24px;
+}
+
+.results__info p {
+  padding-left: 2em;
+  margin: 1.5em 0 1em 0;
+}
+
+.results__info--heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+}
+
+.results__info--heading a {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #375f9d;
+  text-decoration: none;
+}
+
+.results__info--heading h2 {
+  font-size: 1.25rem;
+}
+
+.results__info::after {
+  position: relative;
+  bottom: -1em;
+  content: '';
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  background-color: #bebebe;
+  height: 1px;
+}
+
+.avatar_img {
+  border-radius: 50%;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  margin: 1.5em 0 1em 0;
+  width: 50%;
+  max-width: 200px;
+  height: 30px;
+  text-decoration: none;
+  background-color: #d9e8ff;
+  color: #375f9d;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #375f9d;
+  color: #d9e8ff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (min-width: 720px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5em;
+  }
+  .results {
+    margin-top: 2em;
+  }
+  .users__search__page,
+  .repos__search__page {
+    width: 60%;
+  }
+}
+/*# sourceMappingURL=Results.css.map */

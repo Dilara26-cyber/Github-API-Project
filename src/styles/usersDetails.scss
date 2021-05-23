@@ -1,0 +1,67 @@
+.user__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding:2em 1em;
+  position: relative;
+  img {
+    border-radius: 50%;
+    width: 50%;
+  }
+}
+.username {
+  color: #646464;
+}
+.info {
+  padding: 1em;
+}
+.border-right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #c4c4c4;
+  height: 100vh;
+  width: 1px;
+}
+.repo__count {
+  padding-left: 2em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  p {
+    width: 76px;
+    height: 32px;
+    border-radius: 4px;
+    border: solid 1px #2196f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #2196f3;
+  }
+}
+.repo__count--heading {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .user {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1280px;
+  }
+  .repo__count {
+    padding-left: 0;
+  }
+  .repo__count--heading {
+    font-size: 1.5rem;
+  }
+  .info {
+    width: 70%;
+  }
+}

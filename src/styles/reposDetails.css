@@ -1,0 +1,96 @@
+.side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 1em;
+  gap: 1em;
+}
+
+.side img {
+  width: 64px;
+  height: 64px;
+}
+
+.side_one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  font-size: 1.1rem;
+}
+
+.side_one img {
+  width: 24px;
+  height: 24px;
+}
+
+.side_one p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.side_one span {
+  font-weight: 700;
+  color: #2c98f0;
+}
+
+.info__repo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btn_bookmark {
+  cursor: pointer;
+  outline: none;
+  width: 268px;
+  height: 38px;
+  border: 1px solid #2c98f0;
+  color: rgba(44, 152, 240, 0.87);
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+@media (min-width: 720px) {
+  .repos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1280px;
+  }
+  .info__repo {
+    margin-top: 3em;
+  }
+}
+/*# sourceMappingURL=reposDetails.css.map */
